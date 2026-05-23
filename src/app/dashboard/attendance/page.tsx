@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -22,26 +25,41 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
-import { CalendarIcon, ArrowRight } from "lucide-react";
+import {
+  CalendarIcon,
+  ArrowRight,
+  Download,
+  Camera,
+} from "lucide-react";
 import { format } from "date-fns";
 
 export default function AttendancePage() {
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+
+  const downloadExcel = () => {
+    window.open("http://127.0.0.1:5000/download", "_blank");
+  };
+
   return (
-    <div className="flex items-start justify-center">
-      <Card className="w-full max-w-2xl">
-        <CardHeader>
-          <CardTitle className="text-2xl">Start a New Attendance Session</CardTitle>
-          <CardDescription>
-            Select the class details and date to begin taking attendance.
+    <div className="flex items-start justify-center p-6">
+      <Card className="w-full max-w-3xl shadow-xl border-0 rounded-2xl">
+        <CardHeader className="pb-4">
+          <CardTitle className="text-3xl font-bold text-slate-800">
+            Start New Attendance Session
+          </CardTitle>
+          <CardDescription className="text-base text-slate-500">
+            Select class details and start AI-powered face attendance.
           </CardDescription>
         </CardHeader>
-        <CardContent className="grid gap-6">
+
+        <CardContent className="grid gap-8">
+          {/* Subject + Class */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="subject">Subject</Label>
               <Select>
                 <SelectTrigger id="subject">
-                  <SelectValue placeholder="Select a subject" />
+                  <SelectValue placeholder="Select subject" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="cs">Computer Science</SelectItem>
@@ -51,11 +69,12 @@ export default function AttendancePage() {
                 </SelectContent>
               </Select>
             </div>
+
             <div className="space-y-2">
               <Label htmlFor="class">Class</Label>
               <Select>
                 <SelectTrigger id="class">
-                  <SelectValue placeholder="Select a class" />
+                  <SelectValue placeholder="Select class" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="fy">First Year</SelectItem>
@@ -66,12 +85,13 @@ export default function AttendancePage() {
             </div>
           </div>
 
+          {/* Division + Date */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="division">Division</Label>
               <Select>
                 <SelectTrigger id="division">
-                  <SelectValue placeholder="Select a division" />
+                  <SelectValue placeholder="Select division" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="a">A</SelectItem>
@@ -80,24 +100,25 @@ export default function AttendancePage() {
                 </SelectContent>
               </Select>
             </div>
+
             <div className="space-y-2">
-              <Label htmlFor="date">Date</Label>
+              <Label>Date</Label>
               <Popover>
                 <PopoverTrigger asChild>
                   <Button
-                    variant={"outline"}
+                    variant="outline"
                     className="w-full justify-start text-left font-normal"
                   >
                     <CalendarIcon className="mr-2 h-4 w-4" />
-                    <span>{format(new Date(), "PPP")}</span>
+                    {format(selectedDate, "PPP")}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0">
                   <Calendar
                     mode="single"
-                    selected={new Date()}
-                    disabled={(date) =>
-                      date > new Date() || date < new Date("1900-01-01")
+                    selected={selectedDate}
+                    onSelect={(date) =>
+                      setSelectedDate(date || new Date())
                     }
                     initialFocus
                   />
@@ -106,10 +127,28 @@ export default function AttendancePage() {
             </div>
           </div>
         </CardContent>
-        <CardFooter>
-          <Button asChild className="w-full sm:w-auto ml-auto">
+
+        {/* FOOTER BUTTONS */}
+        <CardFooter className="flex flex-col gap-4 sm:flex-row sm:justify-end">
+          {/* Download Excel */}
+          <Button
+            onClick={downloadExcel}
+            variant="outline"
+            className="w-full sm:w-auto"
+          >
+            <Download className="mr-2 h-4 w-4" />
+            Download Excel
+          </Button>
+
+          {/* Take Attendance - FIXED */}
+          <Button
+            asChild
+            className="w-full sm:w-auto bg-green-600 hover:bg-green-700"
+          >
             <Link href="/dashboard/attendance/live">
-              Take Attendance <ArrowRight className="ml-2 h-4 w-4" />
+              <Camera className="mr-2 h-4 w-4" />
+              Take Attendance
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </CardFooter>

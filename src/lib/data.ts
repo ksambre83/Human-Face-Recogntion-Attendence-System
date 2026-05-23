@@ -20,10 +20,10 @@ export const recentActivity = [
 ];
 
 export const defaulterList = [
-  { id: 'S015', name: 'Charlie Davis', attendance: 68, className: 'CS-A' },
-  { id: 'S023', name: 'Eve Williams', attendance: 71, className: 'PHY-B' },
-  { id: 'S042', name: 'Frank Miller', attendance: 65, className: 'CS-B' },
-  { id: 'S007', name: 'Grace Wilson', attendance: 74, className: 'MTH-A' },
+  { id: 'S015', name: 'Adarsh Dora', attendance: 68, className: 'CS-A' },
+  { id: 'S023', name: 'Shivam Dubey', attendance: 71, className: 'PHY-B' },
+  { id: 'S042', name: 'Roshan Jethani', attendance: 65, className: 'CS-B' },
+  { id: 'S007', name: 'Sarthak Nichat', attendance: 74, className: 'MTH-A' },
 ];
 
 export const allStudents = Array.from({ length: 60 }, (_, i) => ({
@@ -33,18 +33,18 @@ export const allStudents = Array.from({ length: 60 }, (_, i) => ({
 }));
 
 export const attendanceReportData = [
-  { id: 'S001', name: 'Alice Johnson', date: '2024-07-22', subject: 'Computer Science', status: 'Present' },
-  { id: 'S002', name: 'Bob Smith', date: '2024-07-22', subject: 'Computer Science', status: 'Present' },
-  { id: 'S003', name: 'Carol White', date: '2024-07-22', subject: 'Computer Science', status: 'Absent' },
-  { id: 'S004', name: 'David Green', date: '2024-07-22', subject: 'Computer Science', status: 'Present' },
-  { id: 'S005', name: 'Alice Johnson', date: '2024-07-21', subject: 'Physics', status: 'Present' },
-  { id: 'S006', name: 'Bob Smith', date: '2024-07-21', subject: 'Physics', status: 'Absent' },
-  { id: 'S007', name: 'Carol White', date: '2024-07-21', subject: 'Physics', status: 'Present' },
-  { id: 'S008', name: 'David Green', date: '2024-07-21', subject: 'Physics', status: 'Present' },
-  { id: 'S009', name: 'Alice Johnson', date: '2024-07-20', subject: 'Mathematics', status: 'Absent' },
-  { id: 'S010', name: 'Bob Smith', date: '2024-07-20', subject: 'Mathematics', status: 'Present' },
-  { id: 'S011', name: 'Carol White', date: '2024-07-20', subject: 'Mathematics', status: 'Present' },
-  { id: 'S012', name: 'David Green', date: '2024-07-20', subject: 'Mathematics', status: 'Present' },
+  { id: 'S001', name: 'Adarsh Dora', date: '2024-07-22', subject: 'Computer Science', status: 'Present' },
+  { id: 'S002', name: 'Shivam Dubey', date: '2024-07-22', subject: 'Computer Science', status: 'Present' },
+  { id: 'S003', name: 'Roshan Jethani', date: '2024-07-22', subject: 'Computer Science', status: 'Absent' },
+  { id: 'S004', name: 'Sarthak Nichat', date: '2024-07-22', subject: 'Computer Science', status: 'Present' },
+  { id: 'S005', name: 'Adarsh Dora', date: '2024-07-21', subject: 'Physics', status: 'Present' },
+  { id: 'S006', name: 'Shivam Dubey', date: '2024-07-21', subject: 'Physics', status: 'Absent' },
+  { id: 'S007', name: 'Roshan Jethani', date: '2024-07-21', subject: 'Physics', status: 'Present' },
+  { id: 'S008', name: 'Sarthak Nichat', date: '2024-07-21', subject: 'Physics', status: 'Present' },
+  { id: 'S009', name: 'Adarsh Dora', date: '2024-07-20', subject: 'Mathematics', status: 'Absent' },
+  { id: 'S010', name: 'Shivam Dubey', date: '2024-07-20', subject: 'Mathematics', status: 'Present' },
+  { id: 'S011', name: 'Roshan Jethani', date: '2024-07-20', subject: 'Mathematics', status: 'Present' },
+  { id: 'S012', name: 'Sarthak Nichat', date: '2024-07-20', subject: 'Mathematics', status: 'Present' },
 ];
 
 export const analytics = {

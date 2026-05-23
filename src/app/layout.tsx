@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'FaceFlow EDU',
+  title: 'AttendAI',
   description: 'A Face Recognition Based Smart Attendance System by Firebase Studio',
 };
 

@@ -8,7 +8,7 @@
     },
     {
       "id": "project-logo",
-      "description": "The official logo for the FaceFlow EDU project.",
+      "description": "The official logo for the AttendAI project.",
       "imageUrl": "https://picsum.photos/seed/projectlogo/100/100",
       "imageHint": "face recognition"
     },

@@ -22,7 +22,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           <SidebarHeader>
             <Link href="/dashboard" className="flex items-center gap-2">
               <ProjectLogo className="h-8 w-8 text-primary" />
-              <h1 className="text-xl font-bold text-sidebar-foreground">FaceFlow EDU</h1>
+              <h1 className="text-xl font-bold text-sidebar-foreground">AttendAI</h1>
             </Link>
           </SidebarHeader>
           <SidebarContent>

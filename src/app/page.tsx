@@ -31,7 +31,7 @@ export default function LoginPage() {
             </p>
           </div>
           <div className="text-sm text-primary-foreground/60">
-            &copy; {new Date().getFullYear()} FaceFlow EDU. All Rights Reserved.
+            &copy; {new Date().getFullYear()} AttendAI. All Rights Reserved.
           </div>
         </div>
         <div className="flex flex-col justify-center p-8">

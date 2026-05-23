@@ -1,4 +1,4 @@
-# **App Name**: FaceFlow EDU
+# **App Name**: AttendAI
 
 ## Core Features:
 

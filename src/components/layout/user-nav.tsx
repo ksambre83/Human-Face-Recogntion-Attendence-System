@@ -29,10 +29,10 @@ export function UserNav() {
           </Avatar>
           <div className="truncate">
             <div className="truncate text-sm font-medium text-sidebar-foreground">
-              Dr. Evelyn Reed
+              Admin 
             </div>
             <div className="truncate text-xs text-sidebar-foreground/70">
-              e.reed@college.edu
+              e.admin@college.edu
             </div>
           </div>
         </Button>
@@ -40,9 +40,9 @@ export function UserNav() {
       <DropdownMenuContent className="w-56" align="end" forceMount>
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium leading-none">Dr. Evelyn Reed</p>
+            <p className="text-sm font-medium leading-none">Admin</p>
             <p className="text-xs leading-none text-muted-foreground">
-              e.reed@college.edu
+              e.admin@college.edu
             </p>
           </div>
         </DropdownMenuLabel>
