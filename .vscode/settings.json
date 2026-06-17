@@ -1,3 +1,4 @@
 {
-  "workbench.startupEditor": "readme"
+  "workbench.startupEditor": "readme",
+  "python.defaultInterpreterPath": "C:\\Users\\ksamb\\miniconda3\\envs\\face_env\\python.exe"
 }
