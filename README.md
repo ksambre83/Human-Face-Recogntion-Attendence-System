@@ -13,3 +13,20 @@ docs/
 
 ## Author
 Krishang Ambre
+
+
+# Install dependencies
+...bash
+pip install -r requirements.txt
+...
+
+# Run Flask backend
+...bash
+python app.py
+...
+
+# Start frontend
+...bash
+npm install
+npm run dev
+...
